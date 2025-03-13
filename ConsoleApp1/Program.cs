@@ -9,11 +9,11 @@ class Program
             "Six", "Seven", "Eight", "Nine", "Ten",
             "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen",
             "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
-        
+
         //list sa words nga i convert sa number gikan sa 20 padung 90
         List<string> tens = new List<string> { "", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty",
             "Seventy", "Eighty", "Ninety" };
-        
+
         string choice = "";// make sure na walay sulod ang choice
 
         do//buhaton sa niya ang code
@@ -37,7 +37,7 @@ class Program
                 words = "Negative "; //gi pass sa words ang Negative nga output
                 number = -number; // himoun nato positive ang negative number
             }
-        
+
             //Hundred Millions
             if (number >= 100000000) //mo check ug more than 100 million ang gi input sa user
             {
@@ -45,7 +45,7 @@ class Program
                 words = words + ones[hundredMillions] + " Hundred "; //gi pass sa words ang hundred millions nga output ug iyahang equivalent nga words sa index sa ones list
                 number = number - hundredMillions * 100000000; //gi minusan ang number sa hundred millions para makuha ang remaining digits
             }
-        
+
             // Ten Millions and Millions
             if (number >= 1000000) //check ug more than 1 million ang gi input sa user
             {
@@ -65,7 +65,7 @@ class Program
                 words = words + "Million "; //add nimo ang word na million 
                 number = number - millionsPart * 1000000; // tangtangon nimo ang digits sa ten millions or millions na part
             }
-        
+
             // Hundred Thousands
             if (number >= 100000) //either naa pay remaining digits or wala or less than 1 million ang gi input sa user
             {
@@ -137,6 +137,6 @@ class Program
         } while (choice == "y");//ug y ang pilion niya mo loop ang code if dili y, mo exit na ang program
 
         Console.WriteLine("\nExiting the program");//mao ni output ug dili y ang e enter sa user
-        Console.WriteLine("\nProgrammer Mark Joseph Potot");//name nako sir
+
     }
 }
